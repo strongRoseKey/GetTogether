@@ -1,8 +1,27 @@
 body {
-  padding: 50px;
+  padding: 0px;
+  height:100%;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
   color: #00B7FF;
 }
+.navbar{
+  background-color:white;
+}
+.navbar li a{
+  text-decoration: none;
+  color:black;
+  font-size:1.5em;
+}
+.navbar li a:hover{
+  color:black;
+}
+.cover{
+  width:100%;
+  min-height:750px;
+  background-image:url('/images/cover.jpg');
+  background-size: cover;
+}
+
