@@ -1,0 +1,50 @@
+extends layout
+
+block content
+  div(class="container")
+    div(class="navbar-inner")
+      ul(class="nav nav-pills nav-stacked col-md-3")
+        li(href = "#")
+          a(href = "activity/padding") Padding Activity
+        li(href = "#")
+          a(href = "#") Ongoing Activity
+        li(href = "#")
+          a(href = "activity/padding") upcoming Activity
+        li(href = "#")
+          a(href = "#") History Activity
+    div(class="col-md-8")
+      div(class="panel panel-default")
+        div(class="panel-heading") Activity Infomation
+        div(class="panel-body")
+      div
+        table(class="table table-bordered")
+          thead
+            tr
+              th Name
+              th Location
+              th Time
+              th Organizer
+              th more Info
+          tbody
+            tr
+              th Hiking
+              th Shenzhen
+              th 3/7/2015
+              th Cyrus
+              th
+                a(href = "#") more
+            tr
+              th Diving
+              th HongKong
+              th 3/11/2015
+              th Yiran
+              th
+                a(href = "#") more
+            tr
+              th Swimming
+              th HongKong
+              th 31/1/2015
+              th Chris
+              th
+                a(href = "#") more
+
