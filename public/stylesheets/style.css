@@ -23,6 +23,7 @@ a {
   min-height:750px;
   background-image:url('/images/cover.jpg');
   background-size: cover;
+  z-index:-1;
 }
 
 #welcome{
