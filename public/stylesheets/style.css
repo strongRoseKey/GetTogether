@@ -1,10 +1,11 @@
 body {
   padding: 0px;
   height:100%;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: Oswald-Regular-Roman, Tahoma, sans-serif !important;
+  letter-spacing: 0.8px;
 }
 .navbar {
-    background-color: rgba(255, 255, 255, 0.33) !important;
+    background-color: rgb(121, 234, 155) !important;
 }
 .navbar li a {
     color: white !important;
@@ -33,7 +34,7 @@ a {
 
 #welcome{
   margin:0 auto;
-  padding-top:400px;
+  padding-top:350px;
   color:white;
   font-size:4em;
   text-align: center;
@@ -42,12 +43,13 @@ a {
 
 .login,
 .register{
-  margin-top:100px;
+  margin-top:80px;
   border:1px solid white !important;
   background-color:rgba(23, 15, 15, 0.5);
   color:white;
   width:100%;
   height:50px;
+  font-size:20pt !important;
 }
 .login:hover,
 .register:hover{
@@ -87,4 +89,33 @@ a {
   border:1px solid black;
   background-color:white;
   color:black;
+}
+.dropdown-menu>li>a {
+
+  color: #333 !important;
+
+}
+@font-face{
+  font-family:"Oswald-Light-Italic";
+  src:url("/fonts/Oswald-Light-Italic/Oswald-LightItalic.ttf");
+}
+@font-face{
+  font-family:"Oswald-Regular-Italic";
+  src:url("/fonts/Oswald-Regular-Italic/Oswald-RegularItalic.ttf");
+}
+@font-face{
+  font-family:"Oswald-Bold-Italic";
+  src:url("/fonts/Oswald-Demi-Bold-Italic/Oswald-Demi-BoldItalic.ttf");
+}
+@font-face{
+  font-family:"Oswald-Light-Roman";
+  src:url("/fonts/Oswald-Light-Roman/Oswald-Light.ttf");
+}
+@font-face{
+  font-family:"Oswald-Regular-Roman";
+  src:url("/fonts/Oswald-Regular-Roman/Oswald-Regular.ttf");
+}
+@font-face{
+  font-family:"Oswald-Bold-Roman";
+  src:url("/fonts/Oswald-Demi-Bold-Roman/Oswald-DemiBold.ttf");
 }

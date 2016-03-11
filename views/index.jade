@@ -1,66 +1,73 @@
-extends layout
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/stylesheets/activity.css')
+    link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css')
+    script(src='//code.jquery.com/jquery-1.12.0.min.js')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js')
+  body
 
-block content
+    div(class='cover')
+      div(class='row' id='welcome')
+        p
+          b Welcome To GoTogether !
+      div(class='row' id='auth')
+        div(class="col-sm-offset-4 col-sm-4 col-md-offset-3 col-md-2")
+             button(class="btn login" onclick="showLoginPanel()") Login
+        div(class="col-sm-offset-4 col-sm-4 col-md-offset-2 col-md-2")
+             button(class="btn register" onclick="showRegisterPanel()") Register
 
-  div(class='cover')
-    div(class='row' id='welcome')
-      p
-        b Welcome To GoTogether !
-    div(class='row' id='auth')
-      div(class="col-sm-offset-4 col-sm-4 col-md-offset-3 col-md-2")
-           button(class="btn login" onclick="showLoginPanel()") Login
-      div(class="col-sm-offset-4 col-sm-4 col-md-offset-2 col-md-2")
-           button(class="btn register" onclick="showRegisterPanel()") Register
+    div(class='panel panel-default col-sm-4 col-sm-offset-4 loginpanel')
+      div(class='panel-heading')
+        div(class='panel-title')
+          b User Login
 
-  div(class='panel panel-default col-sm-4 col-sm-offset-4 loginpanel')
-    div(class='panel-heading')
-      div(class='panel-title')
-        b User Login
-
-    form(class="form-horizontal" role="form" method='post' action='/userService/login' id='loginform')
-     div(class="form-group")
-        div(class="col-sm-12")
-           input(type="text" class="form-control" name="username"
-              placeholder="username")
-     div(class="form-group")
-        div(class="col-sm-12")
-           input(type="text" class="form-control" name="password"
-              placeholder="password")
-
-
-
-     div(class="form-group")
-        div(class="col-sm-4 col-sm-offset-0 ")
-           button(type="submit" class="btn btn-success btn-lg") Login
-
-        div(class="col-sm-4 col-sm-offset-4")
-           a(class="btn btn-lg btn-default" onclick="hideLoginPanel()") Cancel
-
-  div(class='panel panel-default col-sm-4 col-sm-offset-4 registerpanel')
-    div(class='panel-heading')
-      div(class='panel-title')
-        b User Register
-
-    form(class="form-horizontal" role="form" method='post' action='/userService/register' id='registerform')
-     div(class="form-group")
-        div(class="col-sm-12")
-           input(type="text" class="form-control" name="username"
-              placeholder="username")
-     div(class="form-group")
-        div(class="col-sm-12")
-           input(type="text" class="form-control" name="password"
-              placeholder="password")
-     div(class="form-group")
-        div(class="col-sm-12")
-           input(type="text" class="form-control" name="password_confirm"
-              placeholder="password_confirm")
+      form(class="form-horizontal" role="form" method='post' action='/userService/login' id='loginform')
+       div(class="form-group")
+          div(class="col-sm-12")
+             input(type="text" class="form-control" name="username"
+                placeholder="username")
+       div(class="form-group")
+          div(class="col-sm-12")
+             input(type="text" class="form-control" name="password"
+                placeholder="password")
 
 
-     div(class="form-group")
-        div(class="col-sm-4 col-sm-offset-0")
-           button(type="submit" class="btn btn-success btn-lg") Register
 
-        div(class="col-sm-4 col-sm-offset-4")
-           a(class="btn btn-lg btn-default" onclick="hideRegisterPanel()") Cancel
-  script(src='/javascripts/main.js')
+       div(class="form-group")
+          div(class="col-sm-4 col-sm-offset-0 ")
+             button(type="submit" class="btn btn-success btn-lg") Login
+
+          div(class="col-sm-4 col-sm-offset-4")
+             a(class="btn btn-lg btn-default" onclick="hideLoginPanel()") Cancel
+
+    div(class='panel panel-default col-sm-4 col-sm-offset-4 registerpanel')
+      div(class='panel-heading')
+        div(class='panel-title')
+          b User Register
+
+      form(class="form-horizontal" role="form" method='post' action='/userService/register' id='registerform')
+       div(class="form-group")
+          div(class="col-sm-12")
+             input(type="text" class="form-control" name="username"
+                placeholder="username")
+       div(class="form-group")
+          div(class="col-sm-12")
+             input(type="text" class="form-control" name="password"
+                placeholder="password")
+       div(class="form-group")
+          div(class="col-sm-12")
+             input(type="text" class="form-control" name="password_confirm"
+                placeholder="password_confirm")
+
+
+       div(class="form-group")
+          div(class="col-sm-4 col-sm-offset-0")
+             button(type="submit" class="btn btn-success btn-lg") Register
+
+          div(class="col-sm-4 col-sm-offset-4")
+             a(class="btn btn-lg btn-default" onclick="hideRegisterPanel()") Cancel
+    script(src='/javascripts/main.js')
 

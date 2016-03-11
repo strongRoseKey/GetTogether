@@ -36,13 +36,13 @@ router.post('/register', function(req, res, next) {
   var user = new User(req.body);
   user.save(function(err){
     if(err) throw err;
-    else res.redirect("/");
+    else res.redirect("/activities");
   });
 });
 
 
 router.post('/login',
-            passport.authenticate('local', { successRedirect: '/',
+            passport.authenticate('local', { successRedirect: '/activities',
                                    failureRedirect: '/',
                                    failureFlash: true })
 );
