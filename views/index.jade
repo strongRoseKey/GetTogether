@@ -1,6 +1,7 @@
 extends layout
 
 block content
+
   div(class='cover')
     div(class='row' id='welcome')
       p
@@ -16,29 +17,23 @@ block content
       div(class='panel-title')
         b User Login
 
-    form(class="form-horizontal" role="form" method='PUT' id='loginform')
+    form(class="form-horizontal" role="form" method='post' action='/userService/login' id='loginform')
      div(class="form-group")
-        label(for="name" class="col-sm-2 control-label") Name
-        div(class="col-sm-10")
-           input(type="text" class="form-control" name="name"
-              placeholder="name")
+        div(class="col-sm-12")
+           input(type="text" class="form-control" name="username"
+              placeholder="username")
      div(class="form-group")
-        label(for="image" class="col-sm-2 control-label") Image
-        div(class="col-sm-10")
-           input(type="text" class="form-control" name="image"
-              placeholder="image")
-     div(class="form-group")
-        label(for="masteries" class="col-sm-2 control-label") Masteries
-        div(class="col-sm-10")
-           input(type="text" class="form-control" name="masteries"
-              placeholder="masteries")
+        div(class="col-sm-12")
+           input(type="text" class="form-control" name="password"
+              placeholder="password")
+
 
 
      div(class="form-group")
-        div(class="col-sm-4 col-sm-offset-1 ")
+        div(class="col-sm-4 col-sm-offset-0 ")
            button(type="submit" class="btn btn-success btn-lg") Login
 
-        div(class="col-sm-4 col-sm-offset-2")
+        div(class="col-sm-4 col-sm-offset-4")
            a(class="btn btn-lg btn-default" onclick="hideLoginPanel()") Cancel
 
   div(class='panel panel-default col-sm-4 col-sm-offset-4 registerpanel')
@@ -46,29 +41,26 @@ block content
       div(class='panel-title')
         b User Register
 
-    form(class="form-horizontal" role="form" method='PUT' id='registerform')
+    form(class="form-horizontal" role="form" method='post' action='/userService/register' id='registerform')
      div(class="form-group")
-        label(for="name" class="col-sm-2 control-label") Name
-        div(class="col-sm-10")
-           input(type="text" class="form-control" name="name"
-              placeholder="name")
+        div(class="col-sm-12")
+           input(type="text" class="form-control" name="username"
+              placeholder="username")
      div(class="form-group")
-        label(for="image" class="col-sm-2 control-label") Image
-        div(class="col-sm-10")
-           input(type="text" class="form-control" name="image"
-              placeholder="image")
+        div(class="col-sm-12")
+           input(type="text" class="form-control" name="password"
+              placeholder="password")
      div(class="form-group")
-        label(for="masteries" class="col-sm-2 control-label") Masteries
-        div(class="col-sm-10")
-           input(type="text" class="form-control" name="masteries"
-              placeholder="masteries")
+        div(class="col-sm-12")
+           input(type="text" class="form-control" name="password_confirm"
+              placeholder="password_confirm")
 
 
      div(class="form-group")
-        div(class="col-sm-4 col-sm-offset-1")
+        div(class="col-sm-4 col-sm-offset-0")
            button(type="submit" class="btn btn-success btn-lg") Register
 
-        div(class="col-sm-4 col-sm-offset-2")
+        div(class="col-sm-4 col-sm-offset-4")
            a(class="btn btn-lg btn-default" onclick="hideRegisterPanel()") Cancel
   script(src='/javascripts/main.js')
 
