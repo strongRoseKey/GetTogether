@@ -1,0 +1,63 @@
+extends layout
+
+block content
+
+  div(class="container")
+    div(class="media")
+      div(class="media-left")
+        a(href = "changeAvatar")
+          img(src = "../images/3.jpg")
+          p Change Avatar
+      div(class="media-body")
+        h4(class="media-heading") About Me
+
+        div(class='panel panel-default col-sm-4 col-sm-offset-4 ')
+          div(class='panel-heading')
+            div(class='panel-title')
+              b About Me
+
+          form(class="form-horizontal" role="form" method='post' action='/userService/aboutMe' id='aboutMeForm')
+           div(class="form-group")
+              div(class="col-sm-12")
+                 input(type="text" class="form-control" name="username"
+                    placeholder="Name")
+           div(class="form-group")
+              div(class="col-sm-12")
+                 input(type="text" class="form-control" name="email"
+                    placeholder="Email")
+            div(class="form-group")
+              div(class="col-sm-12")
+                 input(type="text" class="form-control" name="phone"
+                    placeholder="Phone Number")
+            div(class="form-group")
+              div(class="col-sm-12 col-lg-6")
+                div(class="input-group")
+                  span(class="input-group-addon")
+                    input(type="radio" aria-label="...")
+                  input(type="text" class="form-control" name="gender"
+                    placeholder="Gender")
+
+           div(class="form-group")
+              div(class="col-sm-4 col-sm-offset-1 ")
+                 button(type="submit" class="btn btn-success btn-md") Update
+
+              div(class="col-sm-4 col-sm-offset-2")
+                 a(class="btn btn-md btn-default" onclick="javascript:window.location.href='selfProfile'") Cancel
+
+
+        script(src='/javascripts/main.js')
+
+
+
+
+//- <div class="media">
+//-   <div class="media-left">
+//-     <a href="#">
+//-       <img class="media-object" src="..." alt="...">
+//-     </a>
+//-   </div>
+//-   <div class="media-body">
+//-     <h4 class="media-heading">Media heading</h4>
+//-     ...
+//-   </div>
+//- </div>

@@ -6,4 +6,9 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Go Together' });
 });
 
+/* GET home page. */
+router.get('/test', function(req, res, next) {
+  res.render('profile');
+});
+
 module.exports = router;

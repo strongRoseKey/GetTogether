@@ -44,4 +44,19 @@ $('#loginform').submit(function(){
       window.location.href="/";
     }
   })
-});*/
+});
+$('#aboutMeForm').submit(function(){
+  $.ajax(function(){
+    method: "post",
+    url: "/users/profile",
+    data: $('#aboutMeForm').serialize(),
+    success: function(){
+      window.location.href="/activities";
+    },
+    error: function(){
+      window.location.href="/";
+    }
+  })
+});
+
+*/

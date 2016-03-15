@@ -1,0 +1,54 @@
+extends layout
+
+block content
+
+  div(class="media")
+    div(class="media-left")
+      img(src = "../images/3.jpg")
+          //- {{img}}
+    div(class="media-body")
+      h4(class="media-heading") Xinlai
+        //- {{user}}
+
+
+      div(class='panel panel-default col-sm-4 col-sm-offset-4 ')
+        div(class='panel-heading')
+          div(class='panel-title')
+            b
+
+        div(class="form-horizontal" role="form" method='post' action='/userService/aboutMe' id='aboutMeForm')
+         div(class="form-group")
+            div(class="col-sm-12")
+               input(type="text" class="form-control" name="username"
+                  placeholder="Name")
+         div(class="form-group")
+            div(class="col-sm-12")
+               input(type="text" class="form-control" name="email"
+                  placeholder="Email")
+          div(class="form-group")
+            div(class="col-sm-12")
+               input(type="text" class="form-control" name="phone"
+                  placeholder="Phone Number")
+          div(class="form-group")
+            div(class="col-sm-12 col-lg-6")
+              div(class="input-group")
+                span(class="input-group-addon")
+                  input(type="radio" aria-label="...")
+                input(type="text" class="form-control" name="gender"
+                  placeholder="Gender")
+
+         div(class="form-group")
+            div(class="col-sm-4 col-sm-offset-0 ")
+               button(type="submit" class="btn btn-success btn-lg") Update
+
+            div(class="col-sm-4 col-sm-offset-4")
+               a(class="btn btn-lg btn-default" onclick="javascript:window.location.href='selfProfile'") Cancel
+
+
+      script(src='/javascripts/main.js')
+
+
+        //-  div(class='cover')
+        //- div(class='row' id='aboutMe')
+        //-   p
+        //-     b About Me !

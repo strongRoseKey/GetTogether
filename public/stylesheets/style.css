@@ -95,6 +95,20 @@ a {
   color: #333 !important;
 
 }
+
+.media-left img{
+  width: 250px;
+  height: 200px;
+  border-radius: 6px;
+}
+
+.media-left p{
+  font-size: 22px;
+  text-decoration: none;
+  text-align: center;
+  margin-top: 6px;
+  color: #7f8c8d;
+}
 @font-face{
   font-family:"Oswald-Light-Italic";
   src:url("/fonts/Oswald-Light-Italic/Oswald-LightItalic.ttf");
